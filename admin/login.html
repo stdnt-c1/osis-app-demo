@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Admin - OSIS SMKN 7 Samarinda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/admin/_login.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <h1>Admin Login</h1>
+            <p>OSIS SMKN 7 Samarinda</p>
+        </div>
+
+        <div class="error-message" id="errorMessage">
+            Username atau password salah!
+        </div>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit" class="btn-login">
+                <i class="fas fa-sign-in-alt"></i> Login
+            </button>
+        </form>
+
+        <div class="loading" id="loading">
+            <i class="fas fa-spinner"></i> Memproses login...
+        </div>
+
+        <a href="../index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+        </a>
+    </div>
+
+    <script src="../assets/js/admin/config.js"></script>
+    <script src="../assets/js/admin/supabase.js"></script>
+    <script type="module" src="../assets/js/admin/auth.js"></script>
+</body>
+</html>

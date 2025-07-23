@@ -1,0 +1,80 @@
+/* Galeri Section */
+.galeri {
+    padding: 4rem 0;
+}
+
+.galeri h2 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.galeri-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 2px solid #FF7F00;
+    color: #FF7F00;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #FF7F00;
+    color: #FFFFFF;
+}
+
+.galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.galeri-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.galeri-item:hover {
+    transform: scale(1.05);
+}
+
+.galeri-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.galeri-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: #FFFFFF;
+    padding: 2rem 1rem 1rem;
+}
+
+.galeri-overlay h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.galeri-overlay p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}

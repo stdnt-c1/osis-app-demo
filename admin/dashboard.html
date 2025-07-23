@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - OSIS SMKN 7 Samarinda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/admin-main.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Admin <span>OSIS</span></h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="#" data-section="overview">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Overview</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="berita">
+                            <i class="fas fa-newspaper"></i>
+                            <span>Berita & Event</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="galeri">
+                            <i class="fas fa-images"></i>
+                            <span>Galeri</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="keuangan">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>Keuangan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="saran">
+                            <i class="fas fa-comments"></i>
+                            <span>Saran & Kritik</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="users">
+                            <i class="fas fa-users"></i>
+                            <span>Users</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="admin-header">
+                <div class="header-left">
+                    <button class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 id="page-title">Dashboard Overview</h1>
+                </div>
+                <div class="header-right">
+                    <div class="user-info">
+                        <span>Welcome, <strong id="username">Admin</strong></span>
+                        <button class="logout-btn">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Overview Section -->
+                <section id="overview" class="content-section active">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-newspaper"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="total-berita">0</h3>
+                                <p>Total Berita</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-images"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="total-galeri">0</h3>
+                                <p>Total Galeri</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="saldo-kas">Rp 0</h3>
+                                <p>Saldo Kas</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="total-saran">0</h3>
+                                <p>Saran Masuk</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recent-activities">
+                        <h2>Aktivitas Terkini</h2>
+                        <div class="activity-list" id="recent-activities">
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>Berita baru</strong> ditambahkan</p>
+                                    <small>2 jam yang lalu</small>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-comment"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>Saran baru</strong> diterima</p>
+                                    <small>5 jam yang lalu</small>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-money-bill"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>Transaksi baru</strong> dicatat</p>
+                                    <small>1 hari yang lalu</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Berita Section -->
+                <section id="berita" class="content-section">
+                    <div class="section-header">
+                        <h2>Manajemen Berita & Event</h2>
+                        <button class="btn-primary" onclick="openModal('addBeritaModal')">
+                            <i class="fas fa-plus"></i> Tambah Berita
+                        </button>
+                    </div>
+                    
+                    <div class="berita-filters">
+                        <button class="filter-btn active" data-filter="all">Semua</button>
+                        <button class="filter-btn" data-filter="berita">Berita</button>
+                        <button class="filter-btn" data-filter="event">Event</button>
+                        <button class="filter-btn" data-filter="pengumuman">Pengumuman</button>
+                    </div>
+
+                    <div class="data-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Judul</th>
+                                    <th>Kategori</th>
+                                    <th>Tanggal</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="berita-table">
+                                <!-- Data will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Galeri Section -->
+                <section id="galeri" class="content-section">
+                    <div class="section-header">
+                        <h2>Manajemen Galeri</h2>
+                        <button class="btn-primary" onclick="openModal('addGaleriModal')">
+                            <i class="fas fa-plus"></i> Tambah Galeri
+                        </button>
+                    </div>
+
+                    <div class="galeri-admin-grid" id="galeri-admin-grid">
+                        <!-- Galeri items will be populated by JavaScript -->
+                    </div>
+                </section>
+
+                <!-- Keuangan Section -->
+                <section id="keuangan" class="content-section">
+                    <div class="section-header">
+                        <h2>Manajemen Keuangan</h2>
+                        <button class="btn-primary" onclick="openModal('addTransaksiModal')">
+                            <i class="fas fa-plus"></i> Tambah Transaksi
+                        </button>
+                    </div>
+
+                    <div class="keuangan-overview">
+                        <div class="saldo-card">
+                            <h3>Saldo Kas Saat Ini</h3>
+                            <div class="saldo-amount">
+                                <h1 id="current-saldo">Rp 2.500.000</h1>
+                            </div>
+                        </div>
+                        <div class="keuangan-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Total Pemasukan</span>
+                                <span class="stat-value income" id="total-pemasukan">Rp 0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Total Pengeluaran</span>
+                                <span class="stat-value expense" id="total-pengeluaran">Rp 0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="data-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Tanggal</th>
+                                    <th>Deskripsi</th>
+                                    <th>Tipe</th>
+                                    <th>Jumlah</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="keuangan-table">
+                                <!-- Data will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Saran Section -->
+                <section id="saran" class="content-section">
+                    <div class="section-header">
+                        <h2>Saran & Kritik</h2>
+                        <div class="saran-stats">
+                            <span class="stat-badge new">Baru: <span id="saran-baru">0</span></span>
+                            <span class="stat-badge read">Dibaca: <span id="saran-dibaca">0</span></span>
+                            <span class="stat-badge processed">Diproses: <span id="saran-diproses">0</span></span>
+                        </div>
+                    </div>
+
+                    <div class="saran-filters">
+                        <button class="filter-btn active" data-filter="all">Semua</button>
+                        <button class="filter-btn" data-filter="baru">Baru</button>
+                        <button class="filter-btn" data-filter="dibaca">Dibaca</button>
+                        <button class="filter-btn" data-filter="diproses">Diproses</button>
+                        <button class="filter-btn" data-filter="ditanggapi">Ditanggapi</button>
+                    </div>
+
+                    <div class="saran-list" id="saran-list">
+                        <!-- Saran items will be populated by JavaScript -->
+                    </div>
+                </section>
+
+                <!-- Users Section -->
+                <section id="users" class="content-section">
+                    <div class="section-header">
+                        <h2>Manajemen Users</h2>
+                        <button class="btn-primary" onclick="openModal('addUserModal')">
+                            <i class="fas fa-plus"></i> Tambah User
+                        </button>
+                    </div>
+
+                    <div class="data-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Username</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Status</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="users-table">
+                                <!-- Data will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Add Berita Modal -->
+    <div class="modal" id="addBeritaModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Tambah Berita/Event</h3>
+                <span class="close" onclick="closeModal('addBeritaModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="addBeritaForm">
+                    <div class="form-group">
+                        <label>Judul</label>
+                        <input type="text" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Kategori</label>
+                        <select name="category" required>
+                            <option value="berita">Berita</option>
+                            <option value="event">Event</option>
+                            <option value="pengumuman">Pengumuman</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Tanggal</label>
+                        <input type="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Excerpt</label>
+                        <textarea name="excerpt" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Image File</label>
+                        <input type="file" name="imageFile" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                        <label>Image URL (Optional, if not uploading file)</label>
+                        <input type="url" name="imageUrl" placeholder="https://example.com/image.jpg">
+                    </div>
+                    <button type="submit" class="btn-primary">Simpan</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Galeri Modal -->
+    <div class="modal" id="addGaleriModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Tambah Galeri</h3>
+                <span class="close" onclick="closeModal('addGaleriModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="addGaleriForm">
+                    <div class="form-group">
+                        <label>Judul</label>
+                        <input type="text" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Kategori</label>
+                        <select name="category" required>
+                            <option value="ldks">LDKS</option>
+                            <option value="classmeeting">Class Meeting</option>
+                            <option value="hari-guru">Hari Guru</option>
+                            <option value="baksos">Bakti Sosial</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Tanggal</label>
+                        <input type="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Deskripsi</label>
+                        <textarea name="description" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Image File</label>
+                        <input type="file" name="imageFile" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Image URL (Optional, if not uploading file)</label>
+                        <input type="url" name="src" placeholder="https://example.com/image.jpg">
+                    </div>
+                    <button type="submit" class="btn-primary">Simpan</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Transaksi Modal -->
+    <div class="modal" id="addTransaksiModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Tambah Transaksi</h3>
+                <span class="close" onclick="closeModal('addTransaksiModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="addTransaksiForm">
+                    <div class="form-group">
+                        <label>Tanggal</label>
+                        <input type="date" name="tanggal" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Deskripsi</label>
+                        <input type="text" name="deskripsi" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Tipe</label>
+                        <select name="tipe" required>
+                            <option value="pemasukan">Pemasukan</option>
+                            <option value="pengeluaran">Pengeluaran</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Jumlah (Rp)</label>
+                        <input type="number" name="jumlah" min="0" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Simpan</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add User Modal -->
+    <div class="modal" id="addUserModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Tambah User</h3>
+                <span class="close" onclick="closeModal('addUserModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="addUserForm">
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Role</label>
+                        <select name="role" required>
+                            <option value="admin">Admin</option>
+                            <option value="editor">Editor</option>
+                            <option value="keuangan">Keuangan</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">Simpan</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit User Modal -->
+    <div class="modal" id="editUserModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Edit User</h3>
+                <span class="close" onclick="closeModal('editUserModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="editUserForm">
+                    <input type="hidden" id="edit-user-id" name="id">
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" id="edit-username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="edit-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password (kosongkan jika tidak diubah)</label>
+                        <input type="password" id="edit-password" name="password">
+                    </div>
+                    <div class="form-group">
+                        <label>Role</label>
+                        <select id="edit-role" name="role" required>
+                            <option value="admin">Admin</option>
+                            <option value="editor">Editor</option>
+                            <option value="keuangan">Keuangan</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select id="edit-status" name="status" required>
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/admin/config.js"></script>
+    <script type="module" src="../assets/js/admin/supabase.js"></script>
+    <script type="module" src="../assets/js/admin/app.js"></script>
+</body>
+</html>

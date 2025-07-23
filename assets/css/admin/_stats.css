@@ -1,0 +1,108 @@
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.stat-card {
+    background: #FFFFFF;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    background: #FF7F00;
+    color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.stat-info {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.stat-info h3 {
+    color: #333333;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    word-break: break-word;
+    line-height: 1.2;
+}
+
+.stat-info p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Recent Activities */
+.recent-activities {
+    background: #FFFFFF;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.recent-activities h2 {
+    color: #333333;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #F9F9F9;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.activity-item:hover {
+    background: #FFF5E6;
+}
+
+.activity-icon {
+    width: 40px;
+    height: 40px;
+    background: #FF7F00;
+    color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.activity-content p {
+    color: #333333;
+    margin-bottom: 0.25rem;
+}
+
+.activity-content small {
+    color: #666;
+    font-size: 0.8rem;
+}

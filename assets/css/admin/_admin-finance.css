@@ -1,0 +1,63 @@
+/* Keuangan Overview */
+.keuangan-overview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.saldo-card {
+    background: linear-gradient(135deg, #FF7F00, #FFA040);
+    color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(255,127,0,0.3);
+}
+
+.saldo-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.saldo-amount h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.keuangan-stats {
+    background: #FFFFFF;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-label {
+    color: #333333;
+    font-weight: 500;
+}
+
+.stat-value {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.stat-value.income {
+    color: #28a745;
+}
+
+.stat-value.expense {
+    color: #dc3545;
+}

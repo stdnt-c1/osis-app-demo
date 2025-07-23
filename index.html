@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSIS SMKN 7 Samarinda</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>OSIS <span>SMKN 7</span></h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#galeri" class="nav-link">Galeri</a></li>
+                    <li><a href="#berita" class="nav-link">Berita</a></li>
+                    <li><a href="#keuangan" class="nav-link">Keuangan</a></li>
+                    <li><a href="#saran" class="nav-link">Saran</a></li>
+                    <li><a href="admin/login.html" class="nav-link admin-link">Admin</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="hero-slider">
+                <div class="slide active">
+                    <img src="https://picsum.photos/seed/hero1/1200/800" alt="Event OSIS">
+                    <div class="slide-content">
+                        <h1>Selamat Datang di Website OSIS SMKN 7 Samarinda</h1>
+                        <p>Platform digital modern untuk transparansi dan komunikasi OSIS</p>
+                        <a href="#galeri" class="btn-primary">Jelajahi Galeri</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://picsum.photos/seed/hero2/1200/800" alt="Event OSIS">
+                    <div class="slide-content">
+                        <h1>Dokumentasi Kegiatan OSIS</h1>
+                        <p>Temukan berbagai kegiatan dan prestasi yang telah dicapai</p>
+                        <a href="#galeri" class="btn-primary">Lihat Dokumentasi</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://picsum.photos/seed/hero3/1200/800" alt="Event OSIS">
+                    <div class="slide-content">
+                        <h1>Transparansi Keuangan OSIS</h1>
+                        <p>Lihat laporan keuangan dan penggunaan dana OSIS secara transparan</p>
+                        <a href="#keuangan" class="btn-primary">Lihat Laporan</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://picsum.photos/seed/hero4/1200/800" alt="Event OSIS">
+                    <div class="slide-content">
+                        <h1>Aspirasi dan Saran</h1>
+                        <p>Sampaikan aspirasi dan saran untuk kemajuan OSIS</p>
+                        <a href="#saran" class="btn-primary">Kirim Saran</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="slider-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+            </div>
+        </section>
+
+        <!-- Quick Info Section -->
+        <section class="quick-info">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <h3>Berita Terkini</h3>
+                        <div class="info-tabs">
+                            <button class="tab-btn active" data-tab="berita">Berita</button>
+                            <button class="tab-btn" data-tab="event">Event</button>
+                            <button class="tab-btn" data-tab="pengumuman">Pengumuman</button>
+                        </div>
+                        <div class="tab-content active" id="berita-content">
+                            <div class="news-item">
+                                <h4>Peringatan Hari Guru 2024</h4>
+                                <p class="date">12 Juli 2025</p>
+                                <p>OSIS SMKN 7 menyelenggarakan peringatan Hari Guru dengan berbagai kegiatan menarik...</p>
+                            </div>
+                        </div>
+                        <div class="tab-content" id="event-content">
+                            <div class="news-item">
+                                <h4>Class Meeting 2025</h4>
+                                <p class="date">20 Juli 2025</p>
+                                <p>Persiapan Class Meeting antar kelas untuk mempererat tali silaturahmi...</p>
+                            </div>
+                        </div>
+                        <div class="tab-content" id="pengumuman-content">
+                            <div class="news-item">
+                                <h4>Pengumuman Pemilihan Ketua OSIS</h4>
+                                <p class="date">10 Juli 2025</p>
+                                <p>Pendaftaran calon ketua OSIS baru dibuka mulai tanggal 15 Juli 2025...</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Ringkasan Keuangan</h3>
+                        <div class="balance-card">
+                            <div class="balance-amount">
+                                <h2>Rp 2.500.000</h2>
+                                <p>Saldo Kas OSIS</p>
+                            </div>
+                            <div class="balance-chart">
+                                <canvas id="quickChart" width="400" height="200"></canvas>
+                            </div>
+                        </div>
+                        <div class="balance-summary">
+                            <div class="summary-item">
+                                <span class="income">Pemasukan: Rp 1.200.000</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="expense">Pengeluaran: Rp 800.000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-section">
+                    <h2>Akses Cepat</h2>
+                    <div class="cta-grid">
+                        <a href="#galeri" class="cta-card">
+                            <i class="fas fa-images"></i>
+                            <h3>Jelajahi Galeri</h3>
+                            <p>Lihat dokumentasi kegiatan OSIS</p>
+                        </a>
+                        <a href="#berita" class="cta-card">
+                            <i class="fas fa-newspaper"></i>
+                            <h3>Lihat Semua Berita</h3>
+                            <p>Baca berita dan informasi terbaru</p>
+                        </a>
+                        <a href="#keuangan" class="cta-card">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <h3>Transparansi Keuangan</h3>
+                            <p>Lihat laporan keuangan OSIS</p>
+                        </a>
+                        <a href="#saran" class="cta-card">
+                            <i class="fas fa-comments"></i>
+                            <h3>Kirim Saran</h3>
+                            <p>Sampaikan aspirasi dan saran</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeri Section -->
+        <section id="galeri" class="galeri">
+            <div class="container">
+                <h2>Galeri Dokumentasi</h2>
+                <div class="galeri-filters">
+                    <button class="filter-btn active" data-filter="all">Semua</button>
+                    <button class="filter-btn" data-filter="ldks">LDKS</button>
+                    <button class="filter-btn" data-filter="classmeeting">Class Meeting</button>
+                    <button class="filter-btn" data-filter="hari-guru">Hari Guru</button>
+                    <button class="filter-btn" data-filter="baksos">Bakti Sosial</button>
+                </div>
+                <div class="galeri-grid" id="galeri-grid">
+                    <!-- Gallery items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Berita Section -->
+        <section id="berita" class="berita">
+            <div class="container">
+                <h2>Berita, Event & Pengumuman</h2>
+                <div class="berita-filters">
+                    <button class="filter-btn active" data-filter="berita">Berita</button>
+                    <button class="filter-btn" data-filter="event">Event</button>
+                    <button class="filter-btn" data-filter="pengumuman">Pengumuman</button>
+                </div>
+                <div class="berita-grid" id="berita-grid">
+                    <!-- News items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Keuangan Section -->
+        <section id="keuangan" class="keuangan">
+            <div class="container">
+                <h2>Transparansi Keuangan OSIS</h2>
+                <div class="keuangan-grid">
+                    <div class="saldo-card">
+                        <h3>Saldo Kas OSIS</h3>
+                        <div class="saldo-amount">
+                            <h1>Rp 2.500.000</h1>
+                            <p>Per 15 Juli 2025</p>
+                        </div>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Arus Kas (Apr - Jul 2025)</h3>
+                        <canvas id="financeChart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+                <div class="transaksi-table">
+                    <h3>Riwayat Transaksi</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tanggal</th>
+                                <th>Deskripsi</th>
+                                <th>Tipe</th>
+                                <th>Jumlah</th>
+                            </tr>
+                        </thead>
+                        <tbody id="transaksi-tbody">
+                            <!-- Transactions will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Saran Section -->
+        <section id="saran" class="saran">
+            <div class="container">
+                <h2>Saran & Kritik</h2>
+                <div class="saran-content">
+                    <div class="saran-info">
+                        <h3>Sampaikan Aspirasi Anda</h3>
+                        <p>Kami mengundang seluruh warga sekolah untuk menyampaikan saran, kritik, dan aspirasi demi kemajuan OSIS SMKN 7 Samarinda.</p>
+                        <div class="saran-features">
+                            <div class="feature">
+                                <i class="fas fa-user-shield"></i>
+                                <span>Dapat dikirim secara anonim</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-eye"></i>
+                                <span>Akan ditinjau oleh pengurus OSIS</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-reply"></i>
+                                <span>Tanggapan melalui pengumuman resmi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="saran-form">
+                        <form id="saranForm">
+                            <div class="form-group">
+                                <label for="nama">Nama (Opsional)</label>
+                                <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda">
+                            </div>
+                            <div class="form-group">
+                                <label for="kelas">Kelas (Opsional)</label>
+                                <input type="text" id="kelas" name="kelas" placeholder="Contoh: XII RPL 1">
+                            </div>
+                            <div class="form-group">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="anonim" name="anonim">
+                                    <label for="anonim">Kirim secara anonim</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="pesan">Pesan *</label>
+                                <textarea id="pesan" name="pesan" rows="6" placeholder="Tulis saran, kritik, atau aspirasi Anda di sini..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">Kirim Saran</button>
+                        </form>
+                        <div id="form-message"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>OSIS SMKN 7 Samarinda</h3>
+                    <p>Platform digital modern untuk transparansi dan komunikasi OSIS</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> SMKN 7 Samarinda</p>
+                    <p><i class="fas fa-envelope"></i> osis@smkn7samarinda.sch.id</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#galeri">Galeri</a></li>
+                        <li><a href="#berita">Berita</a></li>
+                        <li><a href="#keuangan">Keuangan</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 OSIS SMKN 7 Samarinda. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="galeriModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="assets/js/admin/config.js"></script>
+    <script type="module" src="assets/js/admin/supabase.js"></script>
+    <script type="module" src="assets/js/public/app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

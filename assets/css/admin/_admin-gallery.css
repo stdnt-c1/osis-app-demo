@@ -1,0 +1,51 @@
+/* Galeri Admin Grid */
+.galeri-admin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.galeri-admin-item {
+    background: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.galeri-admin-item:hover {
+    transform: translateY(-5px);
+}
+
+.galeri-admin-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.galeri-admin-content {
+    padding: 1.5rem;
+}
+
+.galeri-admin-content h3 {
+    color: #FF7F00;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.galeri-admin-content p {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.galeri-admin-content .date {
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.galeri-admin-content .actions {
+    display: flex;
+    gap: 0.5rem;
+}

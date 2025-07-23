@@ -1,0 +1,42 @@
+/* CTA Section */
+.cta-section {
+    text-align: center;
+}
+
+.cta-section h2 {
+    color: #333333;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.cta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.cta-card {
+    background: #FFFFFF;
+    padding: 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.cta-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.cta-card i {
+    font-size: 2.5rem;
+    color: #FF7F00;
+    margin-bottom: 1rem;
+}
+
+.cta-card h3 {
+    color: #333333;
+    margin-bottom: 1rem;
+}

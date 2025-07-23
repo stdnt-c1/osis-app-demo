@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "**/*.html",
+      "use": "@vercel/static-build"
+    },
+    {
+      "src": "assets/**/*",
+      "use": "@vercel/static-build"
+    },
+    {
+      "src": "manifest.json",
+      "use": "@vercel/static-build"
+    },
+    {
+      "src": "service-worker.js",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}

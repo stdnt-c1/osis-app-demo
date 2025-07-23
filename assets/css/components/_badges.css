@@ -1,0 +1,48 @@
+/* Badges */
+.badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.badge.berita {
+    background: #17a2b8;
+    color: #FFFFFF;
+}
+
+.badge.event {
+    background: #28a745;
+    color: #FFFFFF;
+}
+
+.badge.pengumuman {
+    background: #ffc107;
+    color: #333333;
+}
+
+.badge.admin {
+    background: #FF7F00;
+    color: #FFFFFF;
+}
+
+.badge.editor {
+    background: #6c757d;
+    color: #FFFFFF;
+}
+
+.badge.keuangan {
+    background: #17a2b8;
+    color: #FFFFFF;
+}
+
+.badge.active {
+    background: #28a745;
+    color: #FFFFFF;
+}
+
+.badge.inactive {
+    background: #dc3545;
+    color: #FFFFFF;
+}

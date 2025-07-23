@@ -1,0 +1,101 @@
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: #FFFFFF;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+        padding: 2rem 0;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .slide-content h1 {
+        font-size: 2rem;
+    }
+    
+    .slide-content p {
+        font-size: 1rem;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .galeri-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .berita-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .keuangan-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .saran-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .galeri-filters,
+    .berita-filters {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .info-tabs {
+        flex-direction: column;
+    }
+    
+    .slider-controls {
+        padding: 0 1rem;
+    }
+    
+    .slider-controls button {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .slide-content p {
+        font-size: 0.9rem;
+    }
+    
+    .btn-primary {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .saldo-amount h1 {
+        font-size: 2rem;
+    }
+    
+    .transaksi-table {
+        overflow-x: auto;
+    }
+    
+    .transaksi-table table {
+        min-width: 500px;
+    }
+}

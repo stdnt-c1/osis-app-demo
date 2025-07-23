@@ -1,0 +1,105 @@
+/* Quick Info Section */
+.quick-info {
+    padding: 4rem 0;
+    background: #F2F2F2;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.info-card {
+    background: #FFFFFF;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+    background: #FF7F00;
+    color: #FFFFFF;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.info-card h3 {
+    color: #333333;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.info-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tab-btn {
+    background: transparent;
+    border: 2px solid #FF7F00;
+    color: #FF7F00;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background: #FF7F00;
+    color: #FFFFFF;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.news-item h4 {
+    color: #FF7F00;
+    margin-bottom: 0.5rem;
+}
+
+.news-item .date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.balance-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.balance-amount h2 {
+    color: #FF7F00;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.balance-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.income {
+    color: #28a745;
+}
+
+.expense {
+    color: #dc3545;
+}

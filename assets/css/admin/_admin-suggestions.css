@@ -1,0 +1,114 @@
+/* Saran Section */
+.saran-stats {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.stat-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.stat-badge.new {
+    background: #28a745;
+    color: #FFFFFF;
+}
+
+.stat-badge.read {
+    background: #17a2b8;
+    color: #FFFFFF;
+}
+
+.stat-badge.processed {
+    background: #ffc107;
+    color: #333333;
+}
+
+.saran-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.saran-item {
+    background: #FFFFFF;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-left: 4px solid #FF7F00;
+}
+
+.saran-item.new {
+    border-left-color: #28a745;
+}
+
+.saran-item.read {
+    border-left-color: #17a2b8;
+}
+
+.saran-item.processed {
+    border-left-color: #ffc107;
+}
+
+.saran-item.responded {
+    border-left-color: #6c757d;
+}
+
+.saran-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 1rem;
+}
+
+.saran-info h4 {
+    color: #333333;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.saran-meta {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.saran-status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.saran-status.new {
+    background: #28a745;
+    color: #FFFFFF;
+}
+
+.saran-status.read {
+    background: #17a2b8;
+    color: #FFFFFF;
+}
+
+.saran-status.processed {
+    background: #ffc107;
+    color: #333333;
+}
+
+.saran-status.responded {
+    background: #6c757d;
+    color: #FFFFFF;
+}
+
+.saran-content {
+    color: #333333;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.saran-actions {
+    display: flex;
+    gap: 0.5rem;
+}
