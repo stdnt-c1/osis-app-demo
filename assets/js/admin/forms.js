@@ -6,7 +6,7 @@ import { renderGaleriGrid } from './gallery.js';
 import { renderKeuanganStats, renderKeuanganTable } from './finance.js';
 import { renderUsersTable } from './users.js';
 import { updateStats } from './overview.js';
-import { uploadFileToS3 } from './s3-upload.js';
+import { uploadFileToVercelBlob } from './vercel-blob.js';
 
 export function initializeForms() {
     // Add Berita Form
@@ -18,7 +18,7 @@ export function initializeForms() {
         let imageUrl = formData.get('imageUrl');
 
         if (imageFile && imageFile.size > 0) {
-            const uploadedUrl = await uploadFileToS3(imageFile);
+            const uploadedUrl = await uploadFileToVercelBlob(imageFile);
             if (uploadedUrl) {
                 imageUrl = uploadedUrl;
             } else {
@@ -62,7 +62,7 @@ export function initializeForms() {
         let imageUrl = formData.get('src');
 
         if (imageFile && imageFile.size > 0) {
-            const uploadedUrl = await uploadFileToS3(imageFile);
+            const uploadedUrl = await uploadFileToVercelBlob(imageFile);
             if (uploadedUrl) {
                 imageUrl = uploadedUrl;
             } else {

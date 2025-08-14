@@ -1,5 +1,6 @@
 GEMINI.md
 .env
+.env.local
 copilot-instructions.md
 PROJECT_STRUCTURE.md
 .vercel

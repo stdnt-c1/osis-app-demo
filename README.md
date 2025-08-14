@@ -12,7 +12,7 @@ The project aims to provide a functional, visually appealing, and maintainable w
 -   **Public-Facing Pages:** Includes sections for Home, Gallery, News & Events, Financial Transparency, and Suggestions.
 -   **Admin Dashboard:** Provides administrative tools for managing content, users, and financial data.
 -   **Supabase Integration:** Utilizes Supabase for database management, authentication, and Row Level Security (RLS).
--   **Simulated File Uploads:** Includes a simulated AWS S3 integration for file uploads.
+-   **Vercel Blob Storage:** Utilizes Vercel Blob for file uploads.
 -   **Progressive Web App (PWA) Features:** Configured with a web app manifest and service worker for offline caching and push notifications.
 -   **Dark Mode:** (Removed)
 
@@ -67,7 +67,7 @@ The project follows a modularized file structure:
 │           ├── forms.js        # Centralized handling for all admin CRUD forms
 │           ├── modals.js       # General modal open/close functions
 │           ├── utils.js        # General utility functions
-│           └── s3-upload.js    # Handles simulated S3 file uploads
+│           └── vercel-blob.js    # Handles Vercel Blob file uploads
 └── supabase/
     └── schema.sql              # Contains the SQL schema for the database
 ```
@@ -94,7 +94,7 @@ Due to browser security policies (CORS), opening `index.html` directly from the 
     -   User registration and login flows are functional.
     -   Role-Based Access Control (RBAC) is implemented.
     -   User management (CRUD operations) is available in the admin dashboard.
--   **File Uploads:** Simulated AWS S3 integration for file uploads is in place.
+-   **File Uploads:** Vercel Blob integration for file uploads is in place.
 -   **Email Notification System:** A simulated email notification system is integrated.
 -   **PWA Features:** Service worker, web app manifest, and push notification setup are complete.
 -   **Dark Mode Theme:** Dark mode functionality has been added.
@@ -106,7 +106,7 @@ Due to browser security policies (CORS), opening `index.html` directly from the 
     -   Choose a backend technology (Supabase).
     -   Set up a database (Supabase PostgreSQL).
 -   **Supabase Integration:**
-    -   Utilize Supabase for storage (currently simulated AWS S3).
+    -   Utilize Supabase for storage (Vercel Blob is now used).
 -   **SQL Files for Datatable Creations:**
     -   Add scripts for seeding initial data.
 -   **Controlled Account for Login:**

@@ -24,7 +24,7 @@ const urlsToCache = [
   '/assets/js/admin/modals.js',
   '/assets/js/admin/navigation.js',
   '/assets/js/admin/overview.js',
-  '/assets/js/admin/s3-upload.js',
+  '/assets/js/admin/vercel-blob.js',
   '/assets/js/admin/suggestions.js',
   '/assets/js/admin/supabase.js',
   '/assets/js/admin/users.js',

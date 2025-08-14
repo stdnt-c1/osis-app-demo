@@ -22,6 +22,6 @@ The `admin/` directory centralizes the client-side scripting for the backend man
 -   `forms.js`: Centralizes the handling of form submissions for all CRUD operations across different admin sections.
 -   `modals.js`: Provides general functions for opening and closing modal dialogs.
 -   `utils.js`: Contains general utility functions (e.g., `formatDate`, `formatCurrency`, `showNotification`) that are reused across various admin modules.
--   `s3-upload.js`: Handles the simulated file upload process to AWS S3.
+-   `vercel-blob.js`: Handles the file upload process to Vercel Blob.
 
 These modules work in conjunction to provide a comprehensive and interactive administrative experience.
