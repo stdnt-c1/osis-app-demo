@@ -1,5 +1,5 @@
 import { formatDate, formatCurrency } from './utils.js';
-import { supabaseClient } from '../admin/supabase.js';
+
 
 const defaultTransaksiData = [
     {

@@ -1,4 +1,4 @@
-import { supabaseClient } from './supabase.js';
+
 import { closeModal } from './modals.js';
 import { showNotification } from './utils.js';
 import { renderBeritaTable } from './berita.js';

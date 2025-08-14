@@ -1,6 +1,6 @@
 const { createClient } = supabase;
 
-const supabaseUrl = SUPABASE_URL;
-const supabaseAnonKey = SUPABASE_ANON_KEY;
+const supabaseUrl = window.env.SUPABASE_URL;
+const supabaseAnonKey = window.env.SUPABASE_ANON_KEY;
 
-export const supabaseClient = createClient(supabaseUrl, supabaseAnonKey);
+const supabaseClient = createClient(supabaseUrl, supabaseAnonKey);

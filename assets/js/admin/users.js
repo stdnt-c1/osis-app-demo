@@ -1,4 +1,4 @@
-import { supabaseClient } from './supabase.js';
+
 import { openModal } from './modals.js';
 import { showNotification } from './utils.js';
 

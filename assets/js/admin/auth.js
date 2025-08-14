@@ -1,4 +1,4 @@
-import { supabaseClient } from './supabase.js';
+
 
 export function initializeAuth() {
     document.getElementById('loginForm').addEventListener('submit', async function(e) {

@@ -1,4 +1,4 @@
-import { supabaseClient } from './supabase.js';
+
 import { formatCurrency } from './utils.js';
 
 export function initializeOverview() {

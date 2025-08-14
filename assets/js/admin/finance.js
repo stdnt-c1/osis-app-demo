@@ -1,4 +1,4 @@
-import { supabaseClient } from './supabase.js';
+
 import { formatDate, formatCurrency, showNotification } from './utils.js';
 import { updateStats } from './overview.js';
 

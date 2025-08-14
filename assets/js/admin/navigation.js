@@ -1,5 +1,5 @@
 import { showNotification } from './utils.js';
-import { supabaseClient } from './supabase.js';
+
 
 export function initializeLogout() {
     document.querySelector('.logout-btn').addEventListener('click', async function() {
